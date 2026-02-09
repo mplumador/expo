@@ -4,7 +4,7 @@
 
 ### 🛠 Breaking changes
 
-- Apps currently using `getAvailableLensesAsync()` or `onAvailableLensesChanged` will need to update to handle the new return type.
+- [iOS] Fixed `selectedLens` prop to use stable `deviceType` identifiers instead of locale-dependent `localizedName` strings, enabling reliable programmatic lens selection across all device languages. ([#42916](https://github.com/expo/expo/pull/42916) by [@mplumador](https://github.com/mplumador))
 
 
 ### 🎉 New features
