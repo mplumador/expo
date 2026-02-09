@@ -4,19 +4,7 @@
 
 ### 🛠 Breaking changes
 
-- Apps currently using `getAvailableLensesAsync()` or `onAvailableLensesChanged` will need to update to handle the new return type. The return type changes from `string[]` to `LensInfo[]`. ([#42916](https://github.com/expo/expo/pull/42916) by [@mplumador](https://github.com/mplumador))
-
-**Migration:**
-```javascript
-// Before
-const lenses = await getAvailableLensesAsync();
-setSelectedLens(lenses[0]); // string
-
-// After
-const lenses = await getAvailableLensesAsync();
-setSelectedLens(lenses[0].deviceType); // use deviceType for selection
-// lenses[0].localizedName available for display
-```
+- Apps currently using `getAvailableLensesAsync()` or `onAvailableLensesChanged` will need to update to handle the new return type.
 
 
 ### 🎉 New features
