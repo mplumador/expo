@@ -206,7 +206,7 @@ class CameraSessionManager: NSObject {
     device.unlockForConfiguration()
   }
 
-  func getAvailableLenses() -> [[String: String]] {
+  func getAvailableLenses() -> [LensInfo] {
     guard let delegate else {
       return []
     }
@@ -218,12 +218,13 @@ class CameraSessionManager: NSObject {
     // Lens ordering can be varied which causes problems if you keep the result in react state.
     // We sort them to provide a stable ordering
     return availableLenses.map { 
-      [
+      LensInfo(
         "deviceType": $0.deviceType.rawValue,
         "localizedName": $0.localizedName
-      ]
+      )
+      
     }.sorted {
-        $0["deviceType"]! < $1["deviceType"]!
+      $0.deviceType < $1.deviceType
     }
   }
 
