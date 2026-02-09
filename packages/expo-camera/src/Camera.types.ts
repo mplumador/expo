@@ -241,7 +241,7 @@ export type LensInfo = {
    */
   deviceType: string;
   /**
-   * The localized display name for the lens (e.g., `"Back Ultra Wide Camera"`).
+   * The localized display name for the lens (for example, `"Back Ultra Wide Camera"`).
    * Use this for displaying lens options in the UI.
    */
   localizedName: string;
