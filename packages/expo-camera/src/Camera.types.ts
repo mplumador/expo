@@ -236,7 +236,7 @@ export type CameraRecordingOptions = {
  */
 export type LensInfo = {
   /**
-   * The stable device type identifier (e.g., `"AVCaptureDeviceTypeBuiltInUltraWideCamera"`).
+   * The stable device type identifier (for example, `"AVCaptureDeviceTypeBuiltInUltraWideCamera"`).
    * Use this value for the `selectedLens` prop.
    */
   deviceType: string;
