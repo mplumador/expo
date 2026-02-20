@@ -133,7 +133,7 @@ export default function CameraScreenLenses() {
 
   const renderMoreOptions = () => {
     // Find the current lens to get its localizedName for display
-    const currentLens = availableLenses.find(l => l.deviceType === state.selectedLens);
+    const currentLens = availableLenses.find((l) => l.deviceType === state.selectedLens);
     return (
       <View style={styles.options}>
         <View style={styles.lensContainer}>
@@ -143,7 +143,9 @@ export default function CameraScreenLenses() {
               <Ionicons name="arrow-back" size={14} color="white" />
             </TouchableOpacity>
             <View style={styles.lensLabel}>
-              <Text style={{ color: 'white', flex: 1 }}>{currentLens?.localizedName ?? state.selectedLens}</Text>
+              <Text style={{ color: 'white', flex: 1 }}>
+                {currentLens?.localizedName ?? state.selectedLens}
+              </Text>
             </View>
             <TouchableOpacity onPress={nextLens} style={{ padding: 6 }}>
               <Ionicons name="arrow-forward" size={14} color="white" />
@@ -151,7 +153,7 @@ export default function CameraScreenLenses() {
           </View>
         </View>
       </View>
-    )
+    );
   };
 
   const renderNoPermissions = () => (
