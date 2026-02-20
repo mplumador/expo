@@ -226,7 +226,7 @@ public class CameraView: ExpoView, EXAppLifecycleListener, EXCameraInterface, Ca
         return
       }
       self.onAvailableLensesChanged([
-        "lenses": self.sessionManager.getAvailableLenses()
+        "lenses": self.getAvailableLenses().map { $0.toDictionary() }
       ])
     }
   }
