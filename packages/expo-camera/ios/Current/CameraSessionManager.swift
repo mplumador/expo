@@ -218,11 +218,7 @@ class CameraSessionManager: NSObject {
     // Lens ordering can be varied which causes problems if you keep the result in react state.
     // We sort them to provide a stable ordering
     return availableLenses.map { 
-      LensInfo(
-        "deviceType": $0.deviceType.rawValue,
-        "localizedName": $0.localizedName
-      )
-      
+      LensInfo(deviceType: $0.deviceType.rawValue, localizedName: $0.localizedName)
     }.sorted {
       $0.deviceType < $1.deviceType
     }
